@@ -27,7 +27,11 @@
 
 1. 运行 `Kleopatra` 客户端程序。
 
-1. 新建密钥对（证书）。创建结束后可看到 `Key ID` 信息。
+1. 新建密钥对（证书）。创建结束后获取 `Key ID` 或 `指纹` 信息，用于后续配置。
+
+    - `指纹` 通过右键点击密钥对，选择 `细节` > `指纹` 查看，长度为 `40` 位，复制按钮直接复制。也可以直接双击密钥直接打开 `细节` 界面。
+
+    - `Key ID` 直接在 `Kleopatra` 界面中显示，长度为 `12` 位，使用时把中间空格删除掉。
 
 1. 配置 `Git` 使用 `GunPG` 进行签名。
 
@@ -35,7 +39,7 @@
     # 明确告诉 Git 使用哪个 GPG 可执行文件来对提交进行签名
     git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
     # 设置签名所用的 GPG 密钥 ID
-    git config --global user.signingkey [KeyID]
+    git config --global user.signingkey [指纹/key ID]
     # 默认对每次提交进行 GPG 签名
     git config --global commit.gpgsign true
     ```

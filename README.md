@@ -42,6 +42,15 @@
     git config --global user.signingkey [指纹/key ID]
     # 默认对每次提交进行 GPG 签名
     git config --global commit.gpgsign true
+
+    # 此步骤一般在安装 Git 时已经配置，这里只是再次确认，可以跳过
+    # 同时检查是否已经配置了 Git 用户名和邮箱，如果已经配置则会打印用户名和邮箱
+    git config --global user.name 
+    git config --global user.email 
+
+    # 如果没有配置则需要手动配置
+    git config --global user.name "Your Name"
+    git config --global user.email "youremail@example.com"
     ```
 
 1. 从 `Kleopatra` 导出公钥。
